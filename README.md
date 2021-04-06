@@ -20,7 +20,7 @@
 ```
 [BOJ] 백준
 [PGS] 프로그래머스
-[IFR] 인프런
+[IFL] 인프런
 
 [BOJ, 2557] Hello World
 ```
