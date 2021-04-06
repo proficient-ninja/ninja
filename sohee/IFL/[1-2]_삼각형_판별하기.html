@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let sum = a + b + c;
+                let max = Math.max(a, b, c);
+                let total = sum - max;
+
+                if(total > max){
+                    return "Y"
+                } else {
+                    return "N"
+                }
+            }
+
+            console.log(solution(6, 7, 11));
+            // 출력결과 : 6 7 11 = Y
+            // 출력결과 : 13 33 17 = N
+        </script>
+    </body>
+</html>
