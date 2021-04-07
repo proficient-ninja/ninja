@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                const sideMin = Math.min(a,b,c)
+                const sideMax = Math.max(a,b,c)
+                const sideMiddle = (a,b,c)=>{
+                    const sum = a+b+c;
+                    const result = sum-sideMin-sideMax;
+                    return result;
+                }
+                // 값 정렬
+                console.log(`sideMin:${sideMin} // sideMidle : ${sideMiddle(a,b,c)} // sideMax:${sideMax}`)
+                
+                if(a<=0||b<=0||c<=0){
+                    return "NO"
+                }
+                const sideSum = sideMin+sideMiddle(a,b,c);
+                if(sideSum>sideMax){
+                    return "YES"
+                }
+                return "NO"
+            }
+
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>
