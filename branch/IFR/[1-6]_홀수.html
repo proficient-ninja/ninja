@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                const odd = [];
+                arr.forEach(ele=>{
+                if(ele%2===1){
+                    odd.push(ele);
+                }})
+                
+                let sum = 0;
+                odd.forEach(ele=>sum+=ele);
+
+                let min = odd[0];
+                odd.forEach(ele=>{if(ele<min){
+                min = ele;}})
+
+                return `sum=${sum}, min=${min}`;
+            }
+            
+            arr=[12, 77, 38, 41, 53, 92, 85];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
