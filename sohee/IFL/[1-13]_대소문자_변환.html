@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function solution(str){
+                const regex = /[A-Z]/;
+                let answer = "";
+
+                for(let i of str) {
+                    answer += (i.search(new RegExp(regex)) === 0 ? i.replace(i, i.toLowerCase()) : i.replace(i, i.toUpperCase()));
+                };
+                return answer;
+            }
+            let str = "StuDY";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
