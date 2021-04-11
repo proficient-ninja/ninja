@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            function solution(str, search){
+                let cnt = 0;
+
+                for(i of str){
+                    let chk = i.indexOf(search);
+
+                    if(chk !== -1){
+                        cnt += 1;
+                    }
+                }
+                return cnt;
+            }
+            let str = "COMPUTERPROGRAMMING";
+            console.log(solution(str, "R"));
+        </script>
+    </body>
+</html>
