@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            function solution(str){
+                let cnt = 0;
+                const regex = /[A-Z]/;
+
+                for(i of str){
+                    if(i.search(new RegExp(regex)) === 0){
+                        cnt += 1;
+                    }
+                }
+                return cnt;
+            }
+            let str = "KoreaTimeGood";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
