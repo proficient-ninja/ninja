@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let string  = s;
+                let result = [];
+                let sharp = "#"
+
+                for(let i=0; i<string.length-1; i++){
+                    if(string[i]==="A"){
+                    result.push(sharp);
+                    }else{
+                        result.push(string[i])
+                    }
+                }
+            return result.join("");
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
