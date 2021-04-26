@@ -10,8 +10,9 @@
                 for(x of str){
                     stringsRength.push(x.length);
                 }
-                console.log(stringsRength)
-                return Math.max(...stringsRength);
+                const maxStringsRength = Math.max(...stringsRength);
+                const answer = s.find(ele=>ele.length===maxStringsRength)
+                return answer;
             }
             let str=["teacher", "time", "student", "beautiful", "good"];
             console.log(solution(str));
