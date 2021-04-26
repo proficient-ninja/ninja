@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let stringsRength = [];
+                for(x of str){
+                    stringsRength.push(x.length);
+                }
+                const maxStringsRength = Math.max(...stringsRength);
+                const answer = s.find(ele=>ele.length===maxStringsRength)
+                return answer;
+            }
+            let str=["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
