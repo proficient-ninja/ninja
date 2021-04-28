@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let number = a;
+        if (a < b) {
+          number = a;
+        } else {
+          number = b;
+        }
+
+        if (number < c) {
+          return number;
+        } else {
+          return c;
+        }
+      }
+
+      console.log(solution(2, 5, 1));
+    </script>
+  </body>
+</html>
