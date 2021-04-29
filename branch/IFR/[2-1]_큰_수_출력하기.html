@@ -5,12 +5,13 @@
     </head>
     <body>
         <script>
-            function solution(arr){      
-                const randomNumber = Math.ceil(Math.random()*100)
-                console.log(randomNumber)   
-                let answer = [] 
-                for(let i=0; i<arr.length; i++){
-                    if(arr[i]>randomNumber) answer.push(arr[i])
+            function solution(arr){
+                let answer = []
+                answer.push(arr[0]);
+                for(let i=1; i<arr.length; i++){
+                    if(arr[i]<arr[i+1]){
+                        answer.push(arr[i+1]);
+                    }
                 }
                 return answer;
             }
