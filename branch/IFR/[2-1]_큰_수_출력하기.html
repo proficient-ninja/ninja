@@ -6,7 +6,8 @@
     <body>
         <script>
             function solution(arr){      
-                const randomNumber = Math.floor(Math.random()*100)   
+                const randomNumber = Math.ceil(Math.random()*100)
+                console.log(randomNumber)   
                 let answer = [] 
                 for(let i=0; i<arr.length; i++){
                     if(arr[i]>randomNumber) answer.push(arr[i])
