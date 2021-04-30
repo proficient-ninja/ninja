@@ -6,13 +6,13 @@
     <body>
         <script>
             function solution(arr){         
-                let answer=0, extraPoints=0
+                let answer=0, Points=0
                 for(let i=0; i<arr.length; i++){
                     if(arr[i]===1){
-                        extraPoints++;
-                        answer+=extraPoints
+                        Points++;
+                        answer+=Points
                     }else{
-                        extraPoints=0;
+                        Points=0;
                     }
                     console.log(answer)
                 }
