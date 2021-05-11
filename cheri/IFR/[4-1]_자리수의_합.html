@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr) {
+                let answer,
+                    max = [0, 0];
+                for (let i = 0; i < n; i++) {
+                    let sum = String(arr[i])
+                        .split('')
+                        .reduce((acc, cur) => acc + Number(cur), 0);
+                    if (max[0] < sum) max = [sum, i];
+                    if (max[0] === sum && arr[max[1]] < arr[i]) max = [sum, i];
+                }
+                answer = arr[max[1]];
+                return answer;
+            }
+
+            let arr = [128, 460, 603, 40, 521, 137, 123];
+            console.log(solution(7, arr));
+        </script>
+    </body>
+</html>
