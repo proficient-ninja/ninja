@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t) {
+                let answer = Array(s.length).fill(Number.MAX_SAFE_INTEGER);
+                const includeT = [];
+
+                //s 안의 t 문자좌표구하기
+                for (let i = 0; i < s.length; i++) {
+                    if (s[i] === t) includeT.push(i);
+                }
+
+                //s의 인덱스에서 좌표값들을 뺀 결과값 중 제일 작은 숫자를 answer로 보내기.
+                //물론 음수가 있을 경우가 있으니 Math.abs를 통하여 절대값으로 변형해주었다.
+                for (let i = 0; i < includeT.length; i++) {
+                    for (let j = 0; j < s.length; j++) {
+                        if (answer[j] > Math.abs(j - includeT[i])) answer[j] = Math.abs(j - includeT[i]);
+                    }
+                }
+
+                return answer;
+            }
+
+            let str = 'teachermode';
+            console.log(solution(str, 'e'));
+        </script>
+    </body>
+</html>

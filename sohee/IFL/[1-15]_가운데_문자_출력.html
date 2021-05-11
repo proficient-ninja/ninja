@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            function solution(str){
+                let answer = "";
+                let strLng = str.length;
+
+                if(strLng % 2 ===0){
+                    answer += str[strLng/2 -1];
+                    answer += str[strLng/2];
+                }else{
+                    answer += str[Math.floor(strLng/2)];
+                }
+                return answer;
+            }
+            let str = "study"; // u
+            // let str = "good" // oo
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

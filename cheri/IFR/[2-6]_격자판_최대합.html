@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){  
+                let column = 0,
+                row = 0,
+                diagonal1 = 0,
+                diagonal2 = 0;
+
+                for(x of arr[1]){
+                    row+=x
+                }
+
+                for(let y=0; y<arr.length; y++){
+                    column+=arr[y][1];
+                }
+
+                for(let n=0; n<arr[0].length; n++){
+                    diagonal1+=arr[n][n]
+                }
+
+                for(let i=0; i<arr[0].length; i++){
+                    for(let j=arr[0].length-1; j>-1; j--){
+                        if(i+j===4){
+                        diagonal2+=arr[i][j]}
+                    }
+                }
+
+                return Math.max(row,column,diagonal1,diagonal2);
+            }
+
+            let arr=[[10, 13, 10, 12, 15], 
+                     [12, 39, 30, 23, 11],
+                     [11, 25, 50, 53, 15],
+                     [19, 27, 29, 37, 27],
+                     [19, 13, 30, 13, 19]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
