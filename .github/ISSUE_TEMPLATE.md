@@ -1,18 +1,17 @@
 ## 💻 CODE
-```
+```js
 
 ```
-<br>
+<br />
 
 ## ❗ PROBLEM
-(문제 발생에 대한 설명)
-<br>
-<br>
+
+<br /><br />
 
 ## 📷 PHOTO
-(사진 첨부)
-<br>
-<br>
+
+<br /><br />
 
 ## 📝 MEMO
-(메모 및 Tip)
+
+<br /><br />

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(day, arr){
+                let result = []
+                arr.forEach(ele=>{if(ele%10===day){
+                    result.push(ele);
+                }})
+                return result;
+            }
+            
+            arr=[25, 23, 11, 47, 53, 17, 33];
+            console.log(solution(3, arr));
+        </script>
+    </body>
+</html>
