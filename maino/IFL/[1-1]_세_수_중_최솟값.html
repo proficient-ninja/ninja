@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            // if를 이용한 방법
+            function solution(a, b, c){
+                let answer;
+                if(a<b && a<c){
+                    answer = a;
+                } else if(a>b && b<c){
+                    answer = b;
+                } else {
+                    answer = c;
+                }
+                return answer;
+            }
+            console.log(solution(2, 5, 1));
+
+            // 삼항연산자를 이용한 방법
+            function solution(a, b, c){
+            let answer
+            a<b && a<c ? answer = a ? a>b && b<c : answer = b : answer = c;
+            return answer;
+            }
+            console.log(solution(2, 5, 1));
+        </script>
+    </body>
+</html>

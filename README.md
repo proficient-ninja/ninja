@@ -16,11 +16,13 @@
 
 <br>
 
-### ✔ codingTest commit message
+### ✔ algorithme
 ```
-[BOJ] 백준
-[PGS] 프로그래머스
-[IFR] 인프런
+[섹션-문제번호]_문제제목
 
-[BOJ, 2557] Hello World
+파일명
+ex) [1-1]_세_수_중_최솟값
+
+commit
+ex) [1-1] 세 수 중 최솟값
 ```
