@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            function solution(arr){
+                let max = 0, answer = "";
+
+                for(i of arr){
+                    if(max < i.length){
+                        max = i.length;
+                        answer = i;
+                    }
+                }
+                return answer;
+            }
+            let arr = [5, "teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

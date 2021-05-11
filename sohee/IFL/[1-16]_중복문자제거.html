@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function solution(str){
+                let regex = /,/, arr = "", answer = "";
+                arr += [... new Set(str)];
+
+                for(let i of arr) {
+                    answer += (i.search(new RegExp(regex)) === 0 ? i.replace(i, "") : i);
+                };
+                return answer;
+            }
+            let str = "ksekkset";
+            console.log(solution(str)); // kset
+        </script>
+    </body>
+</html>
