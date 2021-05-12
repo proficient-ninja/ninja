@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function getPrimeNumber() {
+                let results = [];
+                // 1과 100사이의 숫자 중에 소수를 구하기 위한 반복문
+                for (let i = 2; i <= 100; i++) {
+                    let isPrimeNumber = true;
+                    for (let j = 2; j < i; j++) {
+                        if (i % j === 0) {
+                            isPrimeNumber = false;
+                        }
+                    }
+
+                    // 소수이면 결과값에 할당
+                    if (isPrimeNumber) {
+                        results.push(i);
+                    }
+                }
+
+                return results;
+            }
+
+            function solution(arr) {
+                let answer = [];
+                for (let x of arr) {
+                    let value = x,
+                        sum = 0;
+                    while (value) {
+                        sum = sum * 10 + (value % 10);
+                        value = Math.floor(value / 10);
+                    }
+                    for (let i = 0; i < getPrimeNumber().length; i++) {
+                        if (sum === getPrimeNumber()[i]) answer.push(sum);
+                    }
+                }
+                return answer;
+            }
+
+            let arr = [32, 55, 62, 20, 250, 370, 200, 30, 100];
+            console.log(getPrimeNumber());
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
