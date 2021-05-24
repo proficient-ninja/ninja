@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(m, product) {
+                let answer = 0;
+                const n = product.length;
+
+                //배열 정렬
+                product.sort((a, b) => a[0] + a[1] - (b[0] + b[1]));
+
+                for (let i = 0; i < n; i++) {
+                    //할인할 값은 제일 물건값이 많이 나가는 것으로 선택한다.
+                    //가지고 있는 돈에서 할인된 물건 값을 먼저 빼고, 물건을 하나 샀으니 카운팅한다.
+                    let change = m - (product[i][0] / 2 + product[i][1]);
+                    //구입한 물건을 카운팅한다.
+                    let cnt = 1;
+
+                    for (let j = 0; j < n; j++) {
+                        //쓸 수 있는 돈보다 물건의 값이 크면 break!
+                        if (j !== i && product[j][0] + product[j][1] > change) break;
+
+                        //쓸 수 있는 돈보다 물건의 값이 작거나 같으면 물건의 값을 뺀다.
+                        if (j !== i && product[j][0] + product[j][1] <= change) {
+                            change -= product[j][0] + product[j][1];
+                            //물건을 구입했으니 카운트!
+                            cnt++;
+                        }
+                    }
+                    //answer과 cnt의 값을 확인하고 큰 값을 answer에 넣는다.
+                    answer = Math.max(answer, cnt);
+                }
+
+                return answer;
+            }
+
+            let arr = [
+                [6, 6],
+                [2, 2],
+                [4, 3],
+                [4, 5],
+                [10, 3],
+            ];
+            console.log(solution(28, arr));
+        </script>
+    </body>
+</html>
