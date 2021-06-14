@@ -5,7 +5,7 @@ for each_case in range(case_num) :
 
     average = sum(list_for_num[1:]) / list_for_num[0]
     count = 0
-   
+
     for count_person in list_for_num[1:] :
         if count_person > average :
             count += 1
@@ -13,3 +13,4 @@ for each_case in range(case_num) :
     result = count/list_for_num[0]*100
 
     print(f"{result:.3f}%")
+
