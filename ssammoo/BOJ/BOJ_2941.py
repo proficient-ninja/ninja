@@ -13,6 +13,7 @@ cro_alpha = [
 
 
 for each in cro_alpha :
+    alpha = input_alpha.find(each)
     if each in input_alpha :
         input_alpha = input_alpha.replace(each, "a")
 
