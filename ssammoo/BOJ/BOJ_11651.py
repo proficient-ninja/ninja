@@ -9,5 +9,5 @@ for each in range(array_ea):
 
 input_arr.sort()
 
-for each in input_arr :
-    print(f"{each[1]} {each[0]}")
+for y, x  in input_arr :
+    print(x, y)
