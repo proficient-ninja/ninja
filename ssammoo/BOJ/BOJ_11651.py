@@ -10,4 +10,4 @@ for each in range(array_ea):
 input_arr.sort()
 
 for y, x  in input_arr :
-    print(x, y)
+    print()
