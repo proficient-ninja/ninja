@@ -1,28 +1,21 @@
-function solution(a, b, c) {
-    const sideMin = Math.min(a, b, c);
-    const sideMax = Math.max(a, b, c);
-    const sideMiddle = (a, b, c) => {
-        const sum = a + b + c;
-        const result = sum - sideMin - sideMax;
-        return result;
-    };
-    // 값 정렬
-    console.log(
-        `sideMin:${sideMin} // sideMidle : ${sideMiddle(
-            a,
-            b,
-            c
-        )} // sideMax:${sideMax}`
-    );
+function solution(lottos, win_nums) {
+    let announceCnt = 0;
+    let winCnt = 0;
 
-    if (a <= 0 || b <= 0 || c <= 0) {
-        return "NO";
+    // 맞춘 번호 카운팅과 미지정 번호 카운팅
+    for (let x of lottos) {
+        if (x === 0) {
+            announceCnt++;
+        }
+        if (win_nums.includes(x)) {
+            winCnt++;
+        }
     }
-    const sideSum = sideMin + sideMiddle(a, b, c);
-    if (sideSum > sideMax) {
-        return "YES";
-    }
-    return "NO";
+
+    //최소등수구하기 : 번호가 1개 이하로 맞으면 6등이므로 조건을 달아주었다.
+    const min = winCnt <= 1 ? 6 : 6 - winCnt + 1;
+
+    //최대등수구하기 : 미지정숫자가 6개인 경우를 제외하고, 최소등수에서 미지정숫자를 빼면 최대등수가 된다.
+    const max = announceCnt === 6 ? 1 : min - announceCnt;
+    return [max, min];
 }
-
-console.log(solution(13, 33, 17));
